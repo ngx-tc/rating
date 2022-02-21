@@ -9,10 +9,12 @@
   --tc-rating-color-default: #c1c1c1;
   --tc-rating-color-hover: #ffeb3d;
   --tc-rating-color-active: #faa110;
+  --tc-rating-color-error: var(--tc-color-error);
 
-	display: flex;
+	display: inline-flex;
   font-size: var(--tc-rating-fs);
   margin: 0 calc(var(--tc-rating-module-rem) / 4 * -1);
+  transition: outline .2s var(--tc-rating-transition);
 
   .rating-item {
     align-items: center;
@@ -53,5 +55,9 @@
     .rating-item {
       cursor: default;
     }
+  }
+  &.ng-invalid.ng-touched {
+    outline: #{toRem(1)} solid var(--tc-rating-color-error);
+    outline-offset: #{toRem(3)};
   }
 }

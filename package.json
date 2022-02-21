@@ -1,10 +1,19 @@
 {
   "name": "@ngx-tc/rating",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "author": "type0code",
   "license": "MIT",
   "description": "Angular UI components library",
-  "keywords": ["angular", "angular UI", "angular components", "ng", "ngx", "angular form", "angular control", "angular rating"],
+  "keywords": [
+    "angular",
+    "angular UI",
+    "angular components",
+    "ng",
+    "ngx",
+    "angular form",
+    "angular control",
+    "angular rating"
+  ],
   "repository": "https://github.com/ngx-tc/rating",
   "config": {
     "access": "public"
@@ -17,5 +26,8 @@
   },
   "dependencies": {
     "tslib": "^2.3.0"
+  },
+  "devDependencies": {
+    "@angular-eslint/schematics": "^13.1.0"
   }
 }

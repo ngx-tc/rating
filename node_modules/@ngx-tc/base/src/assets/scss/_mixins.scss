@@ -1,0 +1,14 @@
+// 'px' to 'rem'
+@function toRem($size) {
+  $main-fs: var(--tc-base-fs-number);
+  $remSize: calc(#{$size} / #{$main-fs} * 1rem);
+
+  @return $remSize;
+}
+
+@mixin placeholder {
+  ::-webkit-input-placeholder {@content}
+  :-moz-placeholder           {@content}
+  ::-moz-placeholder          {@content}
+  :-ms-input-placeholder      {@content}
+}

@@ -6,8 +6,7 @@ import {
   Input,
   OnInit,
   Output,
-  Renderer2,
-  TemplateRef
+  Renderer2
 } from '@angular/core';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 
@@ -54,9 +53,10 @@ export class RatingComponent implements OnInit, ControlValueAccessor {
 
   icons: number[];
   number: boolean = false;
+  touched: boolean = false;
 
-  private onChange: any = (value: number) => { };
-  private onTouched: any = () => { };
+  private onChange = (value: number) => {};
+  private onTouched = () => {};
 
   // set value
   set innerValue(value: number) {
@@ -105,7 +105,8 @@ export class RatingComponent implements OnInit, ControlValueAccessor {
   // set value
   onClick(val: number, disabled: boolean): void {
     if (!disabled) {
-      this.innerValue = val
+      this.innerValue = val;
+      this.markAsTouched();
     }
   }
 
@@ -133,5 +134,16 @@ export class RatingComponent implements OnInit, ControlValueAccessor {
         this.renderer.removeClass(itemRef, 'hover');
       });
     }
+  }
+
+  markAsTouched(): void {
+    if (!this.touched) {
+      this.onTouched();
+      this.touched = true;
+    }
+  }
+
+  setDisabledState(disabled: boolean): void {
+    this.disabled = disabled;
   }
 }

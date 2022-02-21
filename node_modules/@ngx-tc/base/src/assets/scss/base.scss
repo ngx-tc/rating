@@ -1,0 +1,11 @@
+@import 'mixins';
+@import 'variables';
+
+::ng-deep {
+  html {
+    font-size: var(--tc-base-fs);
+  }
+  body {
+    font-size: 1rem;
+  }
+}
