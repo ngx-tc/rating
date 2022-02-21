@@ -1,0 +1,57 @@
+@use 'sass:math';
+@import '~@ngx-tc/base/src/assets/scss/base.scss';
+
+:host {
+  --tc-rating-fs: var(--tc-base-fs);
+  --tc-rating-module-rem: var(--tc-base-module-rem);
+  --tc-rating-transition: var(--tc-base-animation, ease-in-out);
+  --tc-rating-size: calc(var(--tc-rating-module-rem) * 2);
+  --tc-rating-color-default: #c1c1c1;
+  --tc-rating-color-hover: #ffeb3d;
+  --tc-rating-color-active: #faa110;
+
+	display: flex;
+  font-size: var(--tc-rating-fs);
+  margin: 0 calc(var(--tc-rating-module-rem) / 4 * -1);
+
+  .rating-item {
+    align-items: center;
+    background: none;
+    border: 0;
+    color: var(--tc-rating-color-default);
+    display: flex;
+    font-size: var(--tc-rating-size);
+    justify-content: center;
+    height: var(--tc-rating-size);
+    margin: 0 calc(var(--tc-rating-module-rem) / 4);
+    outline: none;
+    padding: 0;
+    transition:
+      border .2s var(--tc-rating-transition),
+      color .2s var(--tc-rating-transition);
+    min-width: var(--tc-rating-size);
+
+    &.number {
+      border: #{toRem(2)} solid currentColor;
+      font-size: calc(var(--tc-rating-size) * .5);
+      padding: 0 calc(var(--tc-rating-module-rem) * .5);
+    }
+    &.hover {
+      --tc-rating-color-default: var(--tc-rating-color-hover);
+    }
+    &.active {
+      --tc-rating-color-default: var(--tc-rating-color-active);
+    }
+  }
+	.icon {
+    fill: currentColor;
+    display: block;
+		font-size: inherit;
+    font-style: normal;
+	}
+  &.rating-disabled {
+    .rating-item {
+      cursor: default;
+    }
+  }
+}
