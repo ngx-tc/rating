@@ -1,6 +1,7 @@
 import {
   Component,
-  ElementRef, EventEmitter,
+  ElementRef,
+  EventEmitter,
   forwardRef,
   HostBinding,
   Input,
@@ -46,7 +47,7 @@ export class RatingComponent implements OnInit, ControlValueAccessor {
   @Input() itemsNumber: number = 5;
   @Input() iconClass: string = null;
   @Input() type: string = RatingType.default;
-  @Input() color: string[];
+  @Input() color: string[] = [];
   @Input() value: number = 0;
 
   @Output() changedValue: EventEmitter<number> = new EventEmitter();
@@ -76,9 +77,7 @@ export class RatingComponent implements OnInit, ControlValueAccessor {
   constructor(
     private element: ElementRef,
     private renderer: Renderer2
-  ) {
-    this.color = [];
-  }
+  ) { }
 
   ngOnInit() {
     this.number = this.type === RatingType.number;
