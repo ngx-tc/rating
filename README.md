@@ -1,24 +1,35 @@
-# Rating
+## About
 
-This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.1.5.
+@ngx-tc/rating is an Angular library that provides developers with an easy way to add rating components to their applications. The library includes a set of customizable and reusable components that can be used to display and collect ratings from users.
 
-## Code scaffolding
+@ngx-tc/rating is designed to be easy to use and highly customizable, with a focus on performance and scalability. Whether you need to display a simple rating or a complex set of nested ratings, @ngx-tc/rating provides the tools you need to create robust and responsive rating-based interfaces in your Angular applications.
 
-Run `ng generate component component-name --project rating` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project rating`.
-> Note: Don't forget to add `--project rating` or else it will be added to the default project in your `angular.json` file. 
+## Usage
 
-## Build
+Install `@ngx-tc/rating` in your project:
 
-Run `ng build rating` to build the project. The build artifacts will be stored in the `dist/` directory.
+```
+npm install @ngx-tc/rating
+```
 
-## Publishing
+Import `TcRatingModule` e.g. in your `app.module.ts`:
+```typescript
+import { TcRatingModule } from '@ngx-tc/rating';
 
-After building your library with `ng build rating`, go to the dist folder `cd dist/rating` and run `npm publish`.
+@NgModule({
+  imports: [
+    ...
+    TcRatingModule
+  ],
+})
+export class AppModule {}
+```
 
-## Running unit tests
+Use the `tc-rating` component in you app:
+```html
+<tc-rating formControlName="ratingField"></tc-rating>
+```
 
-Run `ng test rating` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Demo
+To view a working demo of the library in action, please follow the provided link. The demo will allow you to explore the various components and features included in @ngx-tc/list and see how they can be used to create powerful and responsive list-based interfaces in your Angular applications.
+[http://tc-library.type-code.pro/#/components/ratings](http://tc-library.type-code.pro/#/components/ratings)
