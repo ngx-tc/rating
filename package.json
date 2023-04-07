@@ -1,9 +1,9 @@
 {
   "name": "@ngx-tc/rating",
-  "version": "0.0.7",
+  "version": "1.0.0",
   "author": "type0code",
   "license": "MIT",
-  "description": "Angular UI components library",
+  "description": "Angular library that provides developers with an easy way to add rating components to their applications.",
   "keywords": [
     "angular",
     "angular UI",
@@ -15,6 +15,7 @@
     "angular rating"
   ],
   "repository": "https://github.com/ngx-tc/rating",
+  "homepage": "http://tc-library.type-code.pro/#/components/ratings",
   "config": {
     "access": "public"
   },
@@ -22,12 +23,9 @@
     "@angular/common": "^15.1.5",
     "@angular/core": "^15.1.5",
     "@angular/forms": "^15.1.5",
-    "@ngx-tc/base": "^0.0.17"
+    "@ngx-tc/base": "^1.0.1"
   },
   "dependencies": {
     "tslib": "^2.4.0"
-  },
-  "devDependencies": {
-    "@angular-eslint/schematics": "^15.2.1"
   }
 }
